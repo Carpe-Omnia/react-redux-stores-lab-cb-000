@@ -11,7 +11,7 @@ export default function createStore(reducer){
     state = reducer(state, action) ;
     listeners.forEach (listener => listener() )
   }
-  dispatch({})
+  dispatch({type: 'none'})
   return {
     getState: getState,
     dispatch: dispatch,
